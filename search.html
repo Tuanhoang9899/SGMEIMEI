@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SGMEIMEI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Google fonts -->
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- jQuery (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="main.js"></script>
+
+
+</head>
+
+<body>
+
+<div id="page" class="site" bis_skin_checked="1">
+    <header id="masthead" class="site-header scrolled">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container" bis_skin_checked="1">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-heart text-primary me-2"></i>
+                    <span class="brand-text">SG Mei Mei</span>
+                </a>
+
+                <!-- Mobile menu button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav" bis_skin_checked="1">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">
+                                Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="about.html">
+                                About </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="contact.html">
+                                Contact </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="blog.html">
+                                Blog </a>
+                        </li>
+                    </ul>
+
+                    <!-- Right side menu -->
+                    <ul class="navbar-nav right">
+                        <li class="nav-item ">
+                            <a class="nav-link active " href="search.html">
+                                Search  <i class="fa-solid fa-magnifying-glass" style="padding-left: 3px; font-size: 13px"></i></a>
+                        </li>
+                        <!-- Become a Model Button -->
+                        <li class="nav-item">
+                            <a class="btn btn-primary btn_md btn-sm ms-2" href="#">
+                                Become a model </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="primary" class="site-main">
+        <div class="hero-section" bis_skin_checked="1">
+            <div class="container" bis_skin_checked="1">
+                <div class="row" bis_skin_checked="1">
+                    <!-- Search Filters -->
+                    <div class="col-lg-12 mb-4" bis_skin_checked="1">
+                        <div class="filter-card" bis_skin_checked="1">
+                            <h4 id="filter-header" class="filter-title mb-3 d-flex justify-content-between align-items-center"
+                                aria-expanded="false">
+                                Search Filters
+                                <i class="bi bi-chevron-down toggle-icon" id="toggle-icon"></i>
+                            </h4>
+                            <div id="filter-body" class="collapse" bis_skin_checked="1">
+                                <form id="escort-filter-form" class="escort-filters">
+                                    <!-- Area Filter -->
+                                    <div class="filter-group mb-3" bis_skin_checked="1">
+                                        <label for="area-filter" class="form-label">Area</label>
+                                        <select class="form-select" id="area-filter" name="area">
+                                            <option value="">All Areas</option>
+                                            <option value="Bukit Merah">Bukit Merah</option>
+                                            <option value="Centre 中心">Centre 中心</option>
+                                            <option value="Geylang 芽笼">Geylang 芽笼</option>
+                                            <option value="Orchard">Orchard</option>
+                                            <option value="Outram">Outram</option>
+                                            <option value="Rochor">Rochor</option>
+                                            <option value="Sengkang">Sengkang</option>
+                                            <option value="Sentosa">Sentosa</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Country Filter -->
+                                    <div class="filter-group mb-3" bis_skin_checked="1">
+                                        <label for="country-filter" class="form-label">Country</label>
+                                        <select class="form-select" id="country-filter" name="country">
+                                            <option value="">All Countries</option>
+                                            <option value="singapore">Singapore</option>
+                                            <option value="vietnam">Vietnam</option>
+                                            <option value="thailand">Thailand</option>
+                                            <option value="china">China</option>
+                                            <option value="korea">Korea</option>
+                                            <option value="japan">Japan</option>
+                                            <option value="russia">Russia</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Tags Filter -->
+                                    <div class="filter-group mb-3" bis_skin_checked="1">
+                                        <h6 class="filter-subtitle">Tags</h6>
+                                        <div class="tag-filters" bis_skin_checked="1">
+                                            <div class="form-check" bis_skin_checked="1">
+                                                <input class="form-check-input" type="checkbox" value="administrator"
+                                                       id="tag-admin">
+                                                <label class="form-check-label" for="tag-admin">
+                                                    Administrator </label>
+                                            </div>
+                                            <div class="form-check" bis_skin_checked="1">
+                                                <input class="form-check-input" type="checkbox" value="massage"
+                                                       id="tag-massage">
+                                                <label class="form-check-label" for="tag-massage">
+                                                    Massage </label>
+                                            </div>
+                                            <div class="form-check" bis_skin_checked="1">
+                                                <input class="form-check-input" type="checkbox" value="full-services"
+                                                       id="tag-full">
+                                                <label class="form-check-label" for="tag-full">
+                                                    Full Services </label>
+                                            </div>
+                                            <div class="form-check" bis_skin_checked="1">
+                                                <input class="form-check-input" type="checkbox" value="verified"
+                                                       id="tag-verified">
+                                                <label class="form-check-label" for="tag-verified">
+                                                    Verified </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-search" bis_skin_checked="1">
+                                        <!-- Search Input -->
+                                        <div class="filter-group mb-3" bis_skin_checked="1">
+                                            <label for="search-input" class="form-label">Search</label>
+                                            <input type="text" class="form-control" id="search-input" name="search"
+                                                   placeholder="Search...">
+                                        </div>
+
+                                        <!-- Filter Buttons -->
+                                        <div class="filter-actions" bis_skin_checked="1">
+                                            <button type="button" class="btn btn-secondary btn-sm me-2" id="reset-filters">
+                                                Reset
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm" id="apply-filters">
+                                                Apply Filters
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Hidden fields for AJAX -->
+                                    <input type="hidden" name="action" value="filter_escorts">
+                                    <input type="hidden" name="nonce" value="b703450b42">
+                                    <input type="hidden" name="paged" value="1" id="current-page">
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </main><!-- #primary -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="footer-content py-5" bis_skin_checked="1">
+            <div class="container" bis_skin_checked="1">
+                <!-- Footer Widget Area -->
+                <div class="row" bis_skin_checked="1">
+                    <div class="col-lg-3 col-md-6 mb-4" bis_skin_checked="1">
+                        <h5 class="footer-title text-uppercase mb-3">Areas</h5>
+                        <ul class="footer-links list-unstyled">
+                            <li><a href="#">Escort in
+                                Queenstown</a></li>
+                            <li><a href="#">Escort in
+                                The Ritz Carlton Millenia Hotel</a></li>
+                            <li><a href="#">Escort
+                                in Parkroyal Collection Marina Bay Hotel</a></li>
+                            <li><a href="#">Escort in River Valley</a></li>
+                            <li><a href="#">Escort in Clarke Quay</a></li>
+                            <li><a href="#">Escort in City Hall</a></li>
+                            <li><a href="#">Escort in Chinatown</a></li>
+                            <li><a href="#">Escort in Bugis</a></li>
+                            <li><a href="#">Escort in MBS
+                                Hotel</a></li>
+                            <li><a href="#">Escort in Clementi</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4" bis_skin_checked="1">
+                        <h5 class="footer-title text-uppercase mb-3">Blog</h5>
+                        <ul class="footer-links list-unstyled">
+                            <li><a href="#">Unlock Wellness and Relaxation
+                                with Escort Fitness Model Services</a></li>
+                            <li><a href="#">Elevate Your Experience with Escort
+                                FHM Models in Singapore</a></li>
+                            <li><a href="#">Elevate Your Confidence with
+                                Escort Enhanced Breasts: A Comprehensive Guide</a></li>
+                            <li><a href="#">Elevate Your EDM Experience with
+                                Professional Escort EDM Services</a></li>
+                            <li><a href="#">Experience the Relaxing Benefits of
+                                Escort Double D Massage in Singapore</a></li>
+                            <li><a href="#">Premium Escort D Cup Services in
+                                Singapore for Wellness and Relaxation</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4" bis_skin_checked="1">
+                        <h5 class="footer-title text-uppercase mb-3">Types</h5>
+                        <ul class="footer-links list-unstyled">
+                            <li><a href="#">Administrator Escorts</a></li>
+                            <li><a href="#">Massage Escorts</a></li>
+                            <li><a href="#">Full Services Escorts</a></li>
+                            <li><a href="#">Verified Escorts</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4" bis_skin_checked="1">
+                        <h5 class="footer-title text-uppercase mb-3">Contact Info</h5>
+                        <div class="footer-contact" bis_skin_checked="1">
+                            <p class="mb-2">
+                                <i class="fas fa-envelope me-2"></i>
+                                <a href="#">info@escort.com</a>
+                            </p>
+                            <p class="mb-2">
+                                <i class="fas fa-phone me-2"></i>
+                                <a href="tel:6584873425">6584873425</a>
+                            </p>
+                            <div class="social-links mt-3" bis_skin_checked="1">
+                                <a href="https://t.me/Minapham666" class="social-link me-3" aria-label="Telegram">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="" class="social-link me-3" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://wa.me/6584077307" class="social-link me-3" aria-label="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://t.me/Minapham666" class="social-link me-3" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom py-3" bis_skin_checked="1">
+            <div class="container" bis_skin_checked="1">
+                <div class="row align-items-center" bis_skin_checked="1">
+                    <div class="col-md-6" bis_skin_checked="1">
+                        <div class="footer-menu" bis_skin_checked="1">
+                            <a href="about.html" class="footer-menu-link">About Us</a>
+                            <a href="#" class="footer-menu-link">Terms of Service</a>
+                            <a href="#" class="footer-menu-link">Privacy Policy</a>
+                            <a href="#" class="footer-menu-link">Contact</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-md-end" bis_skin_checked="1">
+                        <p class="footer-copyright mb-0">
+                            © 2025 SG Mei Mei - Your Trusted Escort Destination in Singapore.
+                            | All Rights Reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- #colophon -->
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary btn-floating" aria-label="Back to top" style="display: none;">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Age Verification Modal (if needed) -->
+    <div class="modal fade" id="ageModal" tabindex="-1" aria-labelledby="ageModalLabel" aria-hidden="true"
+         bis_skin_checked="1">
+        <div class="modal-dialog modal-dialog-centered" bis_skin_checked="1">
+            <div class="modal-content" bis_skin_checked="1">
+                <div class="modal-header" bis_skin_checked="1">
+                    <h5 class="modal-title" id="ageModalLabel">Age Verification</h5>
+                </div>
+                <div class="modal-body text-center" bis_skin_checked="1">
+                    <p>You must be 18 years or older to access this website.</p>
+                    <p>Are you 18 years of age or older?</p>
+                </div>
+                <div class="modal-footer justify-content-center" bis_skin_checked="1">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal" id="ageConfirm">
+                        Yes, I am 18+
+                    </button>
+                    <button type="button" class="btn btn-danger" id="ageReject">
+                        No, I am under 18
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+
+</html>

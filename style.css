@@ -1,37 +1,61 @@
 :root {
-    /* Colors */
-    --primary-color: #e91e63;
-    --primary-dark: #c2185b;
-    --primary-light: #f06292;
-    --secondary-color: #2c3e50;
-    --success-color: #25d366;
-    --info-color: #0088cc;
-    --warning-color: #ff9800;
-    --danger-color: #f44336;
+    /* =========================================
+       Colors - Lavender Dream (Dịu dàng & Sang trọng)
+       ========================================= */
 
-    /* Background Colors */
-    --body-bg: #0f0f0f;
-    --dark-bg: #1a1a1a;
-    --card-bg: #2d2d2d;
-    --card-bg-hover: #3a3a3a;
+    /* Màu Chủ đạo: Tím Lavender/Orchid mềm mại */
+    --primary-color: #9370DB;
+    /* Màu Tối hơn (cho hover, nút bấm quan trọng) */
+    --primary-dark: #7B68EE;
+    /* Màu Sáng hơn (cho gradient, highlight) */
+    --primary-light: #C3B1E1;
+
+    --secondary-color: #3f51b5; /* Xanh Navy sâu */
+    --success-color: #4CAF50;   /* Xanh lá vẫn giữ để báo hiệu thành công */
+    --info-color: #03A9F4;      /* Xanh dương nhạt */
+    --warning-color: #FFC107;   /* Vàng ấm */
+    --danger-color: #FF5252;    /* Đỏ dịu */
+
+    /* =========================================
+       Background Colors - Dark Blue Tint (Nền Tối Xanh)
+       ========================================= */
+    /* Nền chính: Tông xanh navy rất tối, dịu hơn màu đen tuyệt đối */
+    --body-bg: #12121e;
+    /* Nền khối lớn (Header, Sidebar) */
+    --dark-bg: #1e1e2d;
+    /* Nền Card/Thẻ: Màu tím than/xanh xám */
+    --card-bg: #28283d;
+    --card-bg-hover: #33334d;
     --overlay-bg: rgba(0, 0, 0, 0.7);
 
-    /* Text Colors */
-    --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
-    --text-muted: #888888;
+    /* =========================================
+       Text Colors
+       ========================================= */
+    --text-primary: #f0f0f5;    /* Trắng ngà nhẹ nhàng */
+    --text-secondary: #c9c9d9;  /* Xám nhạt pha tím */
+    --text-muted: #b3b3c8;      /* Văn bản mờ, dễ đọc trên nền tối */
     --text-light: #e0e0e0;
 
-    /* Border Colors */
-    --border-color: #404040;
-    --border-light: #555555;
+    /* =========================================
+       Border Colors
+       ========================================= */
+    --border-color: #4a4a6b;    /* Viền mềm mại */
+    --border-light: #5f5f85;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    /* =========================================
+       Gradients
+       ========================================= */
+    --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
     --gradient-dark: linear-gradient(135deg, var(--dark-bg) 0%, var(--card-bg) 100%);
     --gradient-overlay: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
 
-    /* Typography */
+    /* =========================================
+       Shadows
+       ========================================= */
+    /* Shadow màu tím mềm, tạo chiều sâu cho các nút bấm/card */
+    --shadow-primary: 0 4px 12px rgba(147, 112, 219, 0.3);
+
+    /* GIỮ NGUYÊN Typography, Spacing, Border Radius, Transitions */
     --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     --font-weight-light: 300;
     --font-weight-normal: 400;
@@ -39,7 +63,6 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
-    /* Spacing */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -47,19 +70,15 @@
     --spacing-xl: 2rem;
     --spacing-xxl: 3rem;
 
-    /* Border Radius */
     --border-radius-sm: 0.375rem;
     --border-radius-md: 0.5rem;
     --border-radius-lg: 0.75rem;
     --border-radius-xl: 1rem;
 
-    /* Shadows */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
-    --shadow-primary: 0 4px 12px rgba(233, 30, 99, 0.3);
 
-    /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
@@ -102,6 +121,12 @@ body {
     background-color: #404040 !important;
     border-color: #404040 !important;
     color: #fff;
+}
+
+.title_model{
+    margin-bottom: 30px;
+    background: #fff7ed;
+    color: #333;
 }
 
 
@@ -281,6 +306,12 @@ a{
     box-shadow: var(--shadow-primary);
 }
 
+#escort-grid{
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
     transform: translateY(-2px);
@@ -396,6 +427,22 @@ a{
     top: 100px;
 }
 
+.filter-card .filter-title {
+    cursor: pointer; /* Quan trọng để người dùng biết có thể nhấp vào */
+    padding: 10px 0; /* Tạo vùng nhấp chuột lớn hơn */
+}
+/* Hiệu ứng chuyển động mượt mà cho Icon */
+.filter-card .filter-title .toggle-icon {
+    transition: transform 0.3s ease-in-out;
+    /* Đảm bảo icon ban đầu bị xoay (vì filter-body đang ẩn) */
+    /*transform: rotate(-90deg);*/
+}
+
+/* Class 'rotated' sẽ được thêm/xóa bằng jQuery */
+.filter-card .filter-title .toggle-icon.rotated {
+    transform: rotate(180deg); /* Khi mở, icon quay về 0 độ (hướng xuống) */
+}
+
 .filter-title {
     color: var(--text-primary);
     font-weight: var(--font-weight-bold);
@@ -455,7 +502,7 @@ a{
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-slow);
-    max-height: 320px;
+    max-height: 360px;
 }
 .escort-image-wrapper.single .escort-image{
     max-height: none;
@@ -851,8 +898,31 @@ a{
     }
 }
 
+.right .btn_md{
+    background-color: var(--primary-color);
+    border: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    #escort-grid{
+        gap: 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #escort-grid .escort-info,#escort-grid .escort-tags,#escort-grid .escort-stats{
+        display: none;
+    }
+
+    #escort-grid .escort-pricing{
+        padding: 0;
+        background: unset;
+        border: unset;
+    }
+    #escort-grid .escort-title a {
+        font-size: 13px;
+    }
+
     .faq-section .section-title {
         font-size: 1.875rem;
     }
@@ -1059,7 +1129,7 @@ a{
         font-size: 2rem;
     }
     .escort-filters{
-        flex-direction: column;
+        flex-wrap: wrap;
     }
     .filter-card {
         position: relative;
@@ -1105,9 +1175,6 @@ a{
         padding: var(--spacing-lg);
     }
 
-    .escort-content {
-        padding: var(--spacing-md);
-    }
 }
 
 /* ========================================

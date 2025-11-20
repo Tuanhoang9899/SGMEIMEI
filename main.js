@@ -79,8 +79,33 @@ $(document).ready(function() {
         }
     });
 
-    // Nếu bạn muốn tích hợp hàm openWeChatModal() vào menu chat (ví dụ có nút trong #chatMenu)
-    // Bạn cần gán sự kiện click cho nút đó ở đây.
+
+    const filterBody = $('#filter-body');
+    const filterHeader = $('#filter-header');
+    const toggleIcon = $('#toggle-icon');
+
+    // --- 1. LOGIC CLICK để chuyển đổi trạng thái Collapse ---
+    filterHeader.on('click', function() {
+        filterBody.collapse('toggle');
+    });
+
+    // --- 2. LẮNG NGHE SỰ KIỆN CỦA BOOTSTRAP (KHI NỘI DUNG ĐÃ MỞ) ---
+    filterBody.on('shown.bs.collapse', function () {
+        // Thêm class 'rotated' để xoay icon về 0 độ (hướng xuống)
+        toggleIcon.addClass('rotated');
+        filterHeader.attr('aria-expanded', 'true');
+    });
+
+    // --- 3. LẮNG NGHE SỰ KIỆN CỦA BOOTSTRAP (KHI NỘI DUNG ĐÃ ĐÓNG) ---
+    filterBody.on('hidden.bs.collapse', function () {
+        // Xóa class 'rotated' để icon quay lại -90 độ (hướng ngang)
+        toggleIcon.removeClass('rotated');
+        filterHeader.attr('aria-expanded', 'false');
+    });
+
+    // Lưu ý: Không cần thiết lập transform ban đầu bằng JS
+    // vì chúng ta đã thiết lập transform: rotate(-90deg) trong CSS.
+
 
 
 });
