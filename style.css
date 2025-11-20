@@ -168,6 +168,11 @@ a:hover {
     max-width: 100px;
     height: auto;
 }
+
+.logo img{
+    max-height: 70px;
+    transform: scale(1.1);
+}
 .site-header {
     background: var(--gradient-dark);
     border-bottom: 1px solid var(--border-color);
