@@ -67,11 +67,11 @@
 
                     <!-- Right side menu -->
                     <ul class="navbar-nav right">
-                        <li class="nav-item">
-                            <a class="nav-link " href="search.html">
-                                Search <i class="fa-solid fa-magnifying-glass"
-                                          style="padding-left: 3px; font-size: 13px"></i></a>
-                        </li>
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link " href="search.html">-->
+<!--                                Search <i class="fa-solid fa-magnifying-glass"-->
+<!--                                          style="padding-left: 3px; font-size: 13px"></i></a>-->
+<!--                        </li>-->
                         <!-- Become a Model Button -->
                         <li class="nav-item">
                             <a class="btn btn-primary btn_md btn-sm ms-2" href="#">
@@ -87,17 +87,111 @@
         <div class="hero-section" bis_skin_checked="1">
             <div class="container" bis_skin_checked="1">
                 <div class="row" bis_skin_checked="1">
+                    <div class="col-lg-12 mb-4" bis_skin_checked="1">
+                        <div class="filter-card" bis_skin_checked="1">
+                            <h4 id="filter-header" class="filter-title mb-3 d-flex justify-content-between align-items-center"
+                                aria-expanded="false">
+                                Search Filters
+                                <i class="bi bi-chevron-down toggle-icon" id="toggle-icon"></i>
+                            </h4>
+                            <div id="filter-body" class="collapse" bis_skin_checked="1">
+                                <form id="escort-filter-form" class="escort-filters">
+                                    <!-- Area Filter -->
+                                    <div class="filter-group mb-3" bis_skin_checked="1">
+                                        <label for="area-filter" class="form-label">Area</label>
+                                        <select class="form-select" id="area-filter" name="area">
+                                            <option value="">All Areas</option>
+                                            <option value="Bukit Merah">Bukit Merah</option>
+                                            <option value="Centre 中心">Centre 中心</option>
+                                            <option value="Geylang 芽笼">Geylang 芽笼</option>
+                                            <option value="Orchard">Orchard</option>
+                                            <option value="Outram">Outram</option>
+                                            <option value="Rochor">Rochor</option>
+                                            <option value="Sengkang">Sengkang</option>
+                                            <option value="Sentosa">Sentosa</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Country Filter -->
+                                    <div class="filter-group mb-3" bis_skin_checked="1">
+                                        <label for="country-filter" class="form-label">Country</label>
+                                        <select class="form-select" id="country-filter" name="country">
+                                            <option value="">All Countries</option>
+                                            <option value="singapore">Singapore</option>
+                                            <option value="vietnam">Vietnam</option>
+                                            <option value="thailand">Thailand</option>
+                                            <option value="china">China</option>
+                                            <option value="korea">Korea</option>
+                                            <option value="japan">Japan</option>
+                                            <option value="russia">Russia</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Tags Filter -->
+                                    <div class="filter-group mb-3" bis_skin_checked="1">
+                                        <h6 class="filter-subtitle">Tags</h6>
+                                        <div class="tag-filters" bis_skin_checked="1">
+                                            <div class="form-check" bis_skin_checked="1">
+                                                <input class="form-check-input" type="checkbox" value="administrator"
+                                                       id="tag-admin">
+                                                <label class="form-check-label" for="tag-admin">
+                                                    Administrator </label>
+                                            </div>
+                                            <div class="form-check" bis_skin_checked="1">
+                                                <input class="form-check-input" type="checkbox" value="massage"
+                                                       id="tag-massage">
+                                                <label class="form-check-label" for="tag-massage">
+                                                    Massage </label>
+                                            </div>
+                                            <div class="form-check" bis_skin_checked="1">
+                                                <input class="form-check-input" type="checkbox" value="full-services"
+                                                       id="tag-full">
+                                                <label class="form-check-label" for="tag-full">
+                                                    Full Services </label>
+                                            </div>
+                                            <div class="form-check" bis_skin_checked="1">
+                                                <input class="form-check-input" type="checkbox" value="verified"
+                                                       id="tag-verified">
+                                                <label class="form-check-label" for="tag-verified">
+                                                    Verified </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-search" bis_skin_checked="1">
+                                        <!-- Search Input -->
+                                        <div class="filter-group mb-3" bis_skin_checked="1">
+                                            <label for="search-input" class="form-label">Search</label>
+                                            <input type="text" class="form-control" id="search-input" name="search"
+                                                   placeholder="Search...">
+                                        </div>
+
+                                        <!-- Filter Buttons -->
+                                        <div class="filter-actions" bis_skin_checked="1">
+                                            <button type="button" class="btn btn-secondary btn-sm me-2" id="reset-filters">
+                                                Reset
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm" id="apply-filters">
+                                                Apply Filters
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Hidden fields for AJAX -->
+                                    <input type="hidden" name="action" value="filter_escorts">
+                                    <input type="hidden" name="nonce" value="b703450b42">
+                                    <input type="hidden" name="paged" value="1" id="current-page">
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
                     <div class="w-full px-4 mt-4 title_model" bis_skin_checked="1">
                         <div class="w-full title_model_div bg-gradient-to-r from-amber-50 to-orange-50 p-4 mb-6 "
                              bis_skin_checked="1">
                             <div class="text-center" bis_skin_checked="1">
                                 <div class="text-lg font-semibold text-amber-800 mb-2" bis_skin_checked="1">✨
-                                    真实照片，展现最美的你 Authentic Photos, Show Your Best Self ✨
+                                    Authentic Photos, Show Your Best Self ✨
                                 </div>
                                 <div class="text-sm text-amber-700 leading-relaxed space-y-2" bis_skin_checked="1">
-                                    <div class=" p-2 rounded " bis_skin_checked="1">
-                                        每个人都有独特的美丽，请上传真实照片展现真实的自己。一旦核实假照片我们会第一时间处理，我们致力于维护一个诚信友好的社区环境，感谢您的配合与理解。
-                                    </div>
                                     <div class=" p-2 rounded " bis_skin_checked="1">Everyone has unique
                                         beauty. Please upload authentic photos to show your true self. Once fake photos
                                         are verified, we will handle them immediately. We are committed to maintaining
@@ -146,181 +240,10 @@
                                                  srcset="img/anh_mau.png"
                                                  sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
                                         </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
-
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
-                                        </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
                                         <!-- Image Overlay Badges -->
                                     </div>
@@ -410,181 +333,10 @@
                                                  srcset="img/anh_mau.png"
                                                  sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
                                         </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
-
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
-                                        </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
                                         <!-- Image Overlay Badges -->
                                     </div>
@@ -674,181 +426,10 @@
                                                  srcset="img/anh_mau.png"
                                                  sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
                                         </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
-
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
-                                        </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
                                         <!-- Image Overlay Badges -->
                                     </div>
@@ -938,181 +519,10 @@
                                                  srcset="img/anh_mau.png"
                                                  sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
                                         </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
-
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
-                                        </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
                                         <!-- Image Overlay Badges -->
                                     </div>
@@ -1202,181 +612,10 @@
                                                  srcset="img/anh_mau.png"
                                                  sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
                                         </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
-
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
-                                        </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
                                         <!-- Image Overlay Badges -->
                                     </div>
@@ -1466,181 +705,10 @@
                                                  srcset="img/anh_mau.png"
                                                  sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
                                         </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
-
-                                        <!-- Image Overlay Badges -->
-                                    </div>
-
-                                    <div class="escort-content" bis_skin_checked="1">
-                                        <!-- Title and Location -->
-                                        <div class="escort-header" bis_skin_checked="1">
-                                            <h3 class="escort-title">
-                                                <a href="product_detail.html">Meiqi
-                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
-                                                                       alt="🇸🇬"
-                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
-                                                    Student Singapore – Chinese</a>
-                                            </h3>
-                                        </div>
-
-                                        <!-- Basic Info -->
-                                        <div class="escort-info" bis_skin_checked="1">
-                                            <div class="info-row" bis_skin_checked="1">
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Age:</span>
-                                                    <span class="info-value">19</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Height:</span>
-                                                    <span class="info-value">168</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Boobs:</span>
-                                                    <span class="info-value">D</span>
-                                                </div>
-
-                                                <div class="info-item" bis_skin_checked="1">
-                                                    <span class="info-label">Room:</span>
-                                                    <span class="info-value">Yes</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Tags -->
-                                        <div class="escort-tags mb-2" bis_skin_checked="1">
-                                            <span class="tag-badge">
-                            Verified                        </span>
-                                            <span class="tag-badge">
-                            Video                        </span>
-                                            <span class="tag-badge">
-                            Full Services                        </span>
-                                            <span class="tag-badge">
-                            Massage                        </span>
-                                        </div>
-
-                                        <!-- Pricing -->
-                                        <div class="escort-pricing" bis_skin_checked="1">
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-amount">$200/60 Mins</span>
-                                            </div>
-
-                                            <div class="price-item" bis_skin_checked="1">
-                                                <span class="price-duration">Outcall: $500/90 Mins</span>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- View Count -->
-                                        <div class="escort-stats" bis_skin_checked="1">
-                                            <small class="text-views">
-                                                <i class="fas fa-eye"></i>
-                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_escort" bis_skin_checked="1">
-                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
-                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                     bis_skin_checked="1">
-                                    <div class="escort-image-wrapper" bis_skin_checked="1">
-                                        <a href="product_detail.html"
-                                           class="escort-image-link">
-                                            <img width="300" height="400"
-                                                 src="img/anh_mau.png"
-                                                 class="escort-image wp-post-image"
-                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
-                                                 loading="lazy" decoding="async"
-                                                 srcset="img/anh_mau.png"
-                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
                                         <!-- Image Overlay Badges -->
                                     </div>
@@ -1730,6 +798,11 @@
                                                  srcset="img/anh_mau.png"
                                                  sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
+                                        </div>
+
                                         <!-- Image Overlay Badges -->
                                     </div>
 
@@ -1818,6 +891,11 @@
                                                  srcset="img/anh_mau.png"
                                                  sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
+                                        </div>
+
                                         <!-- Image Overlay Badges -->
                                     </div>
 
@@ -1891,7 +969,750 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="item_escort" bis_skin_checked="1">
+                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
+                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                     bis_skin_checked="1">
+                                    <div class="escort-image-wrapper" bis_skin_checked="1">
+                                        <a href="product_detail.html"
+                                           class="escort-image-link">
+                                            <img width="300" height="400"
+                                                 src="img/anh_mau.png"
+                                                 class="escort-image wp-post-image"
+                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                                 loading="lazy" decoding="async"
+                                                 srcset="img/anh_mau.png"
+                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
 
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
+                                        </div>
+
+                                        <!-- Image Overlay Badges -->
+                                    </div>
+
+                                    <div class="escort-content" bis_skin_checked="1">
+                                        <!-- Title and Location -->
+                                        <div class="escort-header" bis_skin_checked="1">
+                                            <h3 class="escort-title">
+                                                <a href="product_detail.html">Meiqi
+                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
+                                                                       alt="🇸🇬"
+                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
+                                                    Student Singapore – Chinese</a>
+                                            </h3>
+                                        </div>
+
+                                        <!-- Basic Info -->
+                                        <div class="escort-info" bis_skin_checked="1">
+                                            <div class="info-row" bis_skin_checked="1">
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Age:</span>
+                                                    <span class="info-value">19</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Height:</span>
+                                                    <span class="info-value">168</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Boobs:</span>
+                                                    <span class="info-value">D</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Room:</span>
+                                                    <span class="info-value">Yes</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tags -->
+                                        <div class="escort-tags mb-2" bis_skin_checked="1">
+                                            <span class="tag-badge">
+                            Verified                        </span>
+                                            <span class="tag-badge">
+                            Video                        </span>
+                                            <span class="tag-badge">
+                            Full Services                        </span>
+                                            <span class="tag-badge">
+                            Massage                        </span>
+                                        </div>
+
+                                        <!-- Pricing -->
+                                        <div class="escort-pricing" bis_skin_checked="1">
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-amount">$200/60 Mins</span>
+                                            </div>
+
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-duration">Outcall: $500/90 Mins</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- View Count -->
+                                        <div class="escort-stats" bis_skin_checked="1">
+                                            <small class="text-views">
+                                                <i class="fas fa-eye"></i>
+                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_escort" bis_skin_checked="1">
+                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
+                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                     bis_skin_checked="1">
+                                    <div class="escort-image-wrapper" bis_skin_checked="1">
+                                        <a href="product_detail.html"
+                                           class="escort-image-link">
+                                            <img width="300" height="400"
+                                                 src="img/anh_mau.png"
+                                                 class="escort-image wp-post-image"
+                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                                 loading="lazy" decoding="async"
+                                                 srcset="img/anh_mau.png"
+                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
+
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
+                                        </div>
+
+                                        <!-- Image Overlay Badges -->
+                                    </div>
+
+                                    <div class="escort-content" bis_skin_checked="1">
+                                        <!-- Title and Location -->
+                                        <div class="escort-header" bis_skin_checked="1">
+                                            <h3 class="escort-title">
+                                                <a href="product_detail.html">Meiqi
+                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
+                                                                       alt="🇸🇬"
+                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
+                                                    Student Singapore – Chinese</a>
+                                            </h3>
+                                        </div>
+
+                                        <!-- Basic Info -->
+                                        <div class="escort-info" bis_skin_checked="1">
+                                            <div class="info-row" bis_skin_checked="1">
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Age:</span>
+                                                    <span class="info-value">19</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Height:</span>
+                                                    <span class="info-value">168</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Boobs:</span>
+                                                    <span class="info-value">D</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Room:</span>
+                                                    <span class="info-value">Yes</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tags -->
+                                        <div class="escort-tags mb-2" bis_skin_checked="1">
+                                            <span class="tag-badge">
+                            Verified                        </span>
+                                            <span class="tag-badge">
+                            Video                        </span>
+                                            <span class="tag-badge">
+                            Full Services                        </span>
+                                            <span class="tag-badge">
+                            Massage                        </span>
+                                        </div>
+
+                                        <!-- Pricing -->
+                                        <div class="escort-pricing" bis_skin_checked="1">
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-amount">$200/60 Mins</span>
+                                            </div>
+
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-duration">Outcall: $500/90 Mins</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- View Count -->
+                                        <div class="escort-stats" bis_skin_checked="1">
+                                            <small class="text-views">
+                                                <i class="fas fa-eye"></i>
+                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_escort" bis_skin_checked="1">
+                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
+                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                     bis_skin_checked="1">
+                                    <div class="escort-image-wrapper" bis_skin_checked="1">
+                                        <a href="product_detail.html"
+                                           class="escort-image-link">
+                                            <img width="300" height="400"
+                                                 src="img/anh_mau.png"
+                                                 class="escort-image wp-post-image"
+                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                                 loading="lazy" decoding="async"
+                                                 srcset="img/anh_mau.png"
+                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
+
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
+                                        </div>
+
+                                        <!-- Image Overlay Badges -->
+                                    </div>
+
+                                    <div class="escort-content" bis_skin_checked="1">
+                                        <!-- Title and Location -->
+                                        <div class="escort-header" bis_skin_checked="1">
+                                            <h3 class="escort-title">
+                                                <a href="product_detail.html">Meiqi
+                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
+                                                                       alt="🇸🇬"
+                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
+                                                    Student Singapore – Chinese</a>
+                                            </h3>
+                                        </div>
+
+                                        <!-- Basic Info -->
+                                        <div class="escort-info" bis_skin_checked="1">
+                                            <div class="info-row" bis_skin_checked="1">
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Age:</span>
+                                                    <span class="info-value">19</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Height:</span>
+                                                    <span class="info-value">168</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Boobs:</span>
+                                                    <span class="info-value">D</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Room:</span>
+                                                    <span class="info-value">Yes</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tags -->
+                                        <div class="escort-tags mb-2" bis_skin_checked="1">
+                                            <span class="tag-badge">
+                            Verified                        </span>
+                                            <span class="tag-badge">
+                            Video                        </span>
+                                            <span class="tag-badge">
+                            Full Services                        </span>
+                                            <span class="tag-badge">
+                            Massage                        </span>
+                                        </div>
+
+                                        <!-- Pricing -->
+                                        <div class="escort-pricing" bis_skin_checked="1">
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-amount">$200/60 Mins</span>
+                                            </div>
+
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-duration">Outcall: $500/90 Mins</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- View Count -->
+                                        <div class="escort-stats" bis_skin_checked="1">
+                                            <small class="text-views">
+                                                <i class="fas fa-eye"></i>
+                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_escort" bis_skin_checked="1">
+                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
+                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                     bis_skin_checked="1">
+                                    <div class="escort-image-wrapper" bis_skin_checked="1">
+                                        <a href="product_detail.html"
+                                           class="escort-image-link">
+                                            <img width="300" height="400"
+                                                 src="img/anh_mau.png"
+                                                 class="escort-image wp-post-image"
+                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                                 loading="lazy" decoding="async"
+                                                 srcset="img/anh_mau.png"
+                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
+
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
+                                        </div>
+
+                                        <!-- Image Overlay Badges -->
+                                    </div>
+
+                                    <div class="escort-content" bis_skin_checked="1">
+                                        <!-- Title and Location -->
+                                        <div class="escort-header" bis_skin_checked="1">
+                                            <h3 class="escort-title">
+                                                <a href="product_detail.html">Meiqi
+                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
+                                                                       alt="🇸🇬"
+                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
+                                                    Student Singapore – Chinese</a>
+                                            </h3>
+                                        </div>
+
+                                        <!-- Basic Info -->
+                                        <div class="escort-info" bis_skin_checked="1">
+                                            <div class="info-row" bis_skin_checked="1">
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Age:</span>
+                                                    <span class="info-value">19</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Height:</span>
+                                                    <span class="info-value">168</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Boobs:</span>
+                                                    <span class="info-value">D</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Room:</span>
+                                                    <span class="info-value">Yes</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tags -->
+                                        <div class="escort-tags mb-2" bis_skin_checked="1">
+                                            <span class="tag-badge">
+                            Verified                        </span>
+                                            <span class="tag-badge">
+                            Video                        </span>
+                                            <span class="tag-badge">
+                            Full Services                        </span>
+                                            <span class="tag-badge">
+                            Massage                        </span>
+                                        </div>
+
+                                        <!-- Pricing -->
+                                        <div class="escort-pricing" bis_skin_checked="1">
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-amount">$200/60 Mins</span>
+                                            </div>
+
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-duration">Outcall: $500/90 Mins</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- View Count -->
+                                        <div class="escort-stats" bis_skin_checked="1">
+                                            <small class="text-views">
+                                                <i class="fas fa-eye"></i>
+                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_escort" bis_skin_checked="1">
+                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
+                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                     bis_skin_checked="1">
+                                    <div class="escort-image-wrapper" bis_skin_checked="1">
+                                        <a href="product_detail.html"
+                                           class="escort-image-link">
+                                            <img width="300" height="400"
+                                                 src="img/anh_mau.png"
+                                                 class="escort-image wp-post-image"
+                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                                 loading="lazy" decoding="async"
+                                                 srcset="img/anh_mau.png"
+                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
+
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
+                                        </div>
+
+                                        <!-- Image Overlay Badges -->
+                                    </div>
+
+                                    <div class="escort-content" bis_skin_checked="1">
+                                        <!-- Title and Location -->
+                                        <div class="escort-header" bis_skin_checked="1">
+                                            <h3 class="escort-title">
+                                                <a href="product_detail.html">Meiqi
+                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
+                                                                       alt="🇸🇬"
+                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
+                                                    Student Singapore – Chinese</a>
+                                            </h3>
+                                        </div>
+
+                                        <!-- Basic Info -->
+                                        <div class="escort-info" bis_skin_checked="1">
+                                            <div class="info-row" bis_skin_checked="1">
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Age:</span>
+                                                    <span class="info-value">19</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Height:</span>
+                                                    <span class="info-value">168</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Boobs:</span>
+                                                    <span class="info-value">D</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Room:</span>
+                                                    <span class="info-value">Yes</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tags -->
+                                        <div class="escort-tags mb-2" bis_skin_checked="1">
+                                            <span class="tag-badge">
+                            Verified                        </span>
+                                            <span class="tag-badge">
+                            Video                        </span>
+                                            <span class="tag-badge">
+                            Full Services                        </span>
+                                            <span class="tag-badge">
+                            Massage                        </span>
+                                        </div>
+
+                                        <!-- Pricing -->
+                                        <div class="escort-pricing" bis_skin_checked="1">
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-amount">$200/60 Mins</span>
+                                            </div>
+
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-duration">Outcall: $500/90 Mins</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- View Count -->
+                                        <div class="escort-stats" bis_skin_checked="1">
+                                            <small class="text-views">
+                                                <i class="fas fa-eye"></i>
+                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_escort" bis_skin_checked="1">
+                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
+                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                     bis_skin_checked="1">
+                                    <div class="escort-image-wrapper" bis_skin_checked="1">
+                                        <a href="product_detail.html"
+                                           class="escort-image-link">
+                                            <img width="300" height="400"
+                                                 src="img/anh_mau.png"
+                                                 class="escort-image wp-post-image"
+                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                                 loading="lazy" decoding="async"
+                                                 srcset="img/anh_mau.png"
+                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
+
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
+                                        </div>
+
+                                        <!-- Image Overlay Badges -->
+                                    </div>
+
+                                    <div class="escort-content" bis_skin_checked="1">
+                                        <!-- Title and Location -->
+                                        <div class="escort-header" bis_skin_checked="1">
+                                            <h3 class="escort-title">
+                                                <a href="product_detail.html">Meiqi
+                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
+                                                                       alt="🇸🇬"
+                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
+                                                    Student Singapore – Chinese</a>
+                                            </h3>
+                                        </div>
+
+                                        <!-- Basic Info -->
+                                        <div class="escort-info" bis_skin_checked="1">
+                                            <div class="info-row" bis_skin_checked="1">
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Age:</span>
+                                                    <span class="info-value">19</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Height:</span>
+                                                    <span class="info-value">168</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Boobs:</span>
+                                                    <span class="info-value">D</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Room:</span>
+                                                    <span class="info-value">Yes</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tags -->
+                                        <div class="escort-tags mb-2" bis_skin_checked="1">
+                                            <span class="tag-badge">
+                            Verified                        </span>
+                                            <span class="tag-badge">
+                            Video                        </span>
+                                            <span class="tag-badge">
+                            Full Services                        </span>
+                                            <span class="tag-badge">
+                            Massage                        </span>
+                                        </div>
+
+                                        <!-- Pricing -->
+                                        <div class="escort-pricing" bis_skin_checked="1">
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-amount">$200/60 Mins</span>
+                                            </div>
+
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-duration">Outcall: $500/90 Mins</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- View Count -->
+                                        <div class="escort-stats" bis_skin_checked="1">
+                                            <small class="text-views">
+                                                <i class="fas fa-eye"></i>
+                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_escort" bis_skin_checked="1">
+                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
+                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                     bis_skin_checked="1">
+                                    <div class="escort-image-wrapper" bis_skin_checked="1">
+                                        <a href="product_detail.html"
+                                           class="escort-image-link">
+                                            <img width="300" height="400"
+                                                 src="img/anh_mau.png"
+                                                 class="escort-image wp-post-image"
+                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                                 loading="lazy" decoding="async"
+                                                 srcset="img/anh_mau.png"
+                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
+
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
+                                        </div>
+
+                                        <!-- Image Overlay Badges -->
+                                    </div>
+
+                                    <div class="escort-content" bis_skin_checked="1">
+                                        <!-- Title and Location -->
+                                        <div class="escort-header" bis_skin_checked="1">
+                                            <h3 class="escort-title">
+                                                <a href="product_detail.html">Meiqi
+                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
+                                                                       alt="🇸🇬"
+                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
+                                                    Student Singapore – Chinese</a>
+                                            </h3>
+                                        </div>
+
+                                        <!-- Basic Info -->
+                                        <div class="escort-info" bis_skin_checked="1">
+                                            <div class="info-row" bis_skin_checked="1">
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Age:</span>
+                                                    <span class="info-value">19</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Height:</span>
+                                                    <span class="info-value">168</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Boobs:</span>
+                                                    <span class="info-value">D</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Room:</span>
+                                                    <span class="info-value">Yes</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tags -->
+                                        <div class="escort-tags mb-2" bis_skin_checked="1">
+                                            <span class="tag-badge">
+                            Verified                        </span>
+                                            <span class="tag-badge">
+                            Video                        </span>
+                                            <span class="tag-badge">
+                            Full Services                        </span>
+                                            <span class="tag-badge">
+                            Massage                        </span>
+                                        </div>
+
+                                        <!-- Pricing -->
+                                        <div class="escort-pricing" bis_skin_checked="1">
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-amount">$200/60 Mins</span>
+                                            </div>
+
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-duration">Outcall: $500/90 Mins</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- View Count -->
+                                        <div class="escort-stats" bis_skin_checked="1">
+                                            <small class="text-views">
+                                                <i class="fas fa-eye"></i>
+                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_escort" bis_skin_checked="1">
+                                <div class="escort-card fade-in-up" data-escort-id="1442" tabindex="0"
+                                     aria-label="Escort profile: Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                     bis_skin_checked="1">
+                                    <div class="escort-image-wrapper" bis_skin_checked="1">
+                                        <a href="product_detail.html"
+                                           class="escort-image-link">
+                                            <img width="300" height="400"
+                                                 src="img/anh_mau.png"
+                                                 class="escort-image wp-post-image"
+                                                 alt="Meiqi (美琪) 🌟 19YO 🇸🇬Young Student Singapore – Chinese"
+                                                 loading="lazy" decoding="async"
+                                                 srcset="img/anh_mau.png"
+                                                 sizes="auto, (max-width: 300px) 100vw, 300px"> </a>
+
+                                        <div class="verified" bis_skin_checked="1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                            Verified
+                                        </div>
+
+                                        <!-- Image Overlay Badges -->
+                                    </div>
+
+                                    <div class="escort-content" bis_skin_checked="1">
+                                        <!-- Title and Location -->
+                                        <div class="escort-header" bis_skin_checked="1">
+                                            <h3 class="escort-title">
+                                                <a href="product_detail.html">Meiqi
+                                                    (美琪) 🌟 19YO <img draggable="false" role="img" class="emoji"
+                                                                       alt="🇸🇬"
+                                                                       src="https://s.w.org/images/core/emoji/16.0.1/svg/1f1f8-1f1ec.svg">Young
+                                                    Student Singapore – Chinese</a>
+                                            </h3>
+                                        </div>
+
+                                        <!-- Basic Info -->
+                                        <div class="escort-info" bis_skin_checked="1">
+                                            <div class="info-row" bis_skin_checked="1">
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Age:</span>
+                                                    <span class="info-value">19</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Height:</span>
+                                                    <span class="info-value">168</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Boobs:</span>
+                                                    <span class="info-value">D</span>
+                                                </div>
+
+                                                <div class="info-item" bis_skin_checked="1">
+                                                    <span class="info-label">Room:</span>
+                                                    <span class="info-value">Yes</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tags -->
+                                        <div class="escort-tags mb-2" bis_skin_checked="1">
+                                            <span class="tag-badge">
+                            Verified                        </span>
+                                            <span class="tag-badge">
+                            Video                        </span>
+                                            <span class="tag-badge">
+                            Full Services                        </span>
+                                            <span class="tag-badge">
+                            Massage                        </span>
+                                        </div>
+
+                                        <!-- Pricing -->
+                                        <div class="escort-pricing" bis_skin_checked="1">
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-amount">$200/60 Mins</span>
+                                            </div>
+
+                                            <div class="price-item" bis_skin_checked="1">
+                                                <span class="price-duration">Outcall: $500/90 Mins</span>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- View Count -->
+                                        <div class="escort-stats" bis_skin_checked="1">
+                                            <small class="text-views">
+                                                <i class="fas fa-eye"></i>
+                                                Views: 1,194 | Reviews: 41 | Likes: 180 </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -2592,12 +2413,27 @@
                 </div>
             </div>
         </div>
+
+
+        <div id="footer-social-icons" class="text-center py-3">
+            <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="social-icon footer-icon whatsapp-color" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" class="social-icon footer-icon telegram-color" aria-label="Telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+
+            <a href="mailto:YOUR_EMAIL_ADDRESS" class="social-icon footer-icon mail-color" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
     </footer><!-- #colophon -->
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="btn btn-primary btn-floating" aria-label="Back to top" style="display: none;">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <button id="back-to-top" class="btn btn-primary btn-floating" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
 
     <!-- Age Verification Modal (if needed) -->
     <div class="modal fade" id="ageModal" tabindex="-1" aria-labelledby="ageModalLabel" aria-hidden="true"

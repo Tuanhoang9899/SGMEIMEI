@@ -1,61 +1,70 @@
 :root {
     /* =========================================
-       Colors - Lavender Dream (Dịu dàng & Sang trọng)
+       Colors - Vibrant Red on Light (Đỏ Rực trên Nền Sáng)
        ========================================= */
 
-    /* Màu Chủ đạo: Tím Lavender/Orchid mềm mại */
-    --primary-color: #9370DB;
+    /* Màu Chủ đạo: Đỏ Rực (Electric Red) */
+    --primary-color: #FF0000;
     /* Màu Tối hơn (cho hover, nút bấm quan trọng) */
-    --primary-dark: #7B68EE;
+    --primary-dark: #CC0000;
     /* Màu Sáng hơn (cho gradient, highlight) */
-    --primary-light: #C3B1E1;
+    --primary-light: #FF3333;
 
-    --secondary-color: #3f51b5; /* Xanh Navy sâu */
-    --success-color: #4CAF50;   /* Xanh lá vẫn giữ để báo hiệu thành công */
-    --info-color: #03A9F4;      /* Xanh dương nhạt */
-    --warning-color: #FFC107;   /* Vàng ấm */
-    --danger-color: #FF5252;    /* Đỏ dịu */
-
-    /* =========================================
-       Background Colors - Dark Blue Tint (Nền Tối Xanh)
-       ========================================= */
-    /* Nền chính: Tông xanh navy rất tối, dịu hơn màu đen tuyệt đối */
-    --body-bg: #12121e;
-    /* Nền khối lớn (Header, Sidebar) */
-    --dark-bg: #1e1e2d;
-    /* Nền Card/Thẻ: Màu tím than/xanh xám */
-    --card-bg: #28283d;
-    --card-bg-hover: #33334d;
-    --overlay-bg: rgba(0, 0, 0, 0.7);
+    --secondary-color: #34495E; /* Xanh Navy cho các phần phụ */
+    --success-color: #28A745;
+    --info-color: #17A2B8;
+    --warning-color: #FFC107;
+    --danger-color: #DC3545;
 
     /* =========================================
-       Text Colors
+       Background Colors - Light Mode (Nền Sáng Sắc Nét)
        ========================================= */
-    --text-primary: #f0f0f5;    /* Trắng ngà nhẹ nhàng */
-    --text-secondary: #c9c9d9;  /* Xám nhạt pha tím */
-    --text-muted: #b3b3c8;      /* Văn bản mờ, dễ đọc trên nền tối */
-    --text-light: #e0e0e0;
+    /* Nền chính: Trắng Tinh Khiết */
+    --body-bg: #FFFFFF;
+    /* Nền khối đặc biệt/header (Màu xám nhạt để tạo sự khác biệt) */
+    --dark-bg: #F5F5F5;
+    /* Nền Card/Thẻ: Màu trắng tinh khiết */
+    --card-bg: #FFFFFF;
+    --card-bg-hover: #FAFAFA; /* Hơi xám khi hover */
+    --overlay-bg: rgba(0, 0, 0, 0.5); /* Overlay tối để nổi bật trên nền sáng */
+
+    /* =========================================
+       Text Colors - Dark Text (Văn bản Tối)
+       ========================================= */
+    /* Văn bản chính: Màu đen sắc nét */
+    --text-primary: #1A1A1A;
+    --text-secondary: #333333;
+    /* Văn bản mờ: Xám trung tính, dễ đọc */
+    --text-muted: #6C757D;
+    /* Text sáng (sử dụng trên nền đỏ) */
+    --text-light: #F5F5F5;
 
     /* =========================================
        Border Colors
        ========================================= */
-    --border-color: #4a4a6b;    /* Viền mềm mại */
-    --border-light: #5f5f85;
+    /* Viền: Xám rất nhạt, tinh tế */
+    --border-color: #E0E0E0;
+    --border-light: #EEEEEE;
 
     /* =========================================
        Gradients
        ========================================= */
     --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
-    --gradient-dark: linear-gradient(135deg, var(--dark-bg) 0%, var(--card-bg) 100%);
+    --gradient-dark: linear-gradient(135deg, #E0E0E0 0%, #F5F5F5 100%);
     --gradient-overlay: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+
 
     /* =========================================
        Shadows
        ========================================= */
-    /* Shadow màu tím mềm, tạo chiều sâu cho các nút bấm/card */
-    --shadow-primary: 0 4px 12px rgba(147, 112, 219, 0.3);
+    /* Shadow màu đỏ rực, nổi bật trên nền trắng */
+    --shadow-primary: 0 4px 12px rgba(255, 0, 0, 0.4);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 15px rgba(0, 0, 0, 0.15);
 
-    /* GIỮ NGUYÊN Typography, Spacing, Border Radius, Transitions */
+
+    /* GIỮ NGUYÊN các thuộc tính khác */
     --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     --font-weight-light: 300;
     --font-weight-normal: 400;
@@ -74,10 +83,6 @@
     --border-radius-md: 0.5rem;
     --border-radius-lg: 0.75rem;
     --border-radius-xl: 1rem;
-
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
 
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
@@ -147,7 +152,7 @@ h6 { font-size: 1rem; }
 
 p {
     margin-bottom: var(--spacing-md);
-    color: var(--text-light);
+    color: var(--text-primary);
 }
 
 a {
@@ -175,7 +180,7 @@ a:hover {
 }
 .site-header {
     background: #fff;
-    /*border-bottom: 1px solid var(--border-color);*/
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -392,7 +397,7 @@ a{
 }
 
 .form-label {
-    color: var(--text-light);
+    color: var(--text-primary);
     font-weight: var(--font-weight-medium);
     margin-bottom: var(--spacing-xs);
 }
@@ -408,7 +413,7 @@ a{
 }
 
 .form-check-label {
-    color: var(--text-light);
+    color: var(--text-primary);
     font-size: 0.875rem;
 }
 
@@ -473,7 +478,7 @@ a{
 }
 
 .filter-subtitle {
-    color: var(--text-light);
+    color: var(--text-primary);
     font-weight: var(--font-weight-medium);
     margin-bottom: var(--spacing-md);
     font-size: 1rem;
@@ -542,6 +547,18 @@ a{
     justify-content: center;
     font-size: 3rem;
     color: var(--text-muted);
+}
+.verified{
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    color: #fff;
+    background-color: #16a34a;
+    padding: 4px 8px;
+    border-radius: 50px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
 }
 
 .escort-overlay {
@@ -786,7 +803,7 @@ a{
 }
 
 .about-content p {
-    color: var(--text-light);
+    color: var(--text-primary);
     font-size: 1.1rem;
     line-height: 1.7;
 }
@@ -934,11 +951,11 @@ a{
     #escort-grid{
         gap: 5px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
-    #escort-grid .escort-info,#escort-grid .escort-tags,#escort-grid .escort-stats{
-        display: none;
-    }
+    /*#escort-grid .escort-info,#escort-grid .escort-tags,#escort-grid .escort-stats{*/
+    /*    display: none;*/
+    /*}*/
 
     #escort-grid .escort-pricing{
         padding: 0;
@@ -1022,11 +1039,11 @@ a{
 
 .footer-contact p {
     margin-bottom: var(--spacing-md);
-    color: var(--text-light);
+    color: var(--text-primary);
 }
 
 .footer-contact a {
-    color: var(--text-light);
+    color: var(--text-primary);
     transition: color var(--transition-fast);
 }
 
@@ -1085,23 +1102,156 @@ a{
 /* ========================================
    BACK TO TOP BUTTON
 ======================================== */
+/* =======================================================
+   Back-to-Top Button Style
+   ======================================================= */
+
 #back-to-top {
+    /* Vị trí cố định ở góc dưới bên phải */
     position: fixed;
-    bottom: var(--spacing-xl);
-    right: var(--spacing-xl);
-    width: 50px;
-    height: 50px;
+    bottom: var(--spacing-lg); /* 1.5rem từ đáy */
+    right: var(--spacing-lg);  /* 1.5rem từ phải */
+    z-index: 1050; /* Đảm bảo nó luôn nằm trên các nội dung khác */
+
+    /* Kích thước và hình dạng */
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    display: none;
-    z-index: 999;
-    box-shadow: var(--shadow-lg);
-    transition: all var(--transition-fast);
-    padding: 0;
+
+    /* Màu sắc và hiệu ứng */
+    background-color: var(--primary-color) !important;
+    color: var(--text-light); /* Màu trắng cho mũi tên */
+    border: none;
+    box-shadow: var(--shadow-md); /* Bóng đổ nhẹ nhàng */
+    opacity: 0; /* Ban đầu ẩn */
+    visibility: hidden;
+    transition: all var(--transition-normal); /* Chuyển động mượt mà */
+
+    /* Căn giữa icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 0; /* Bỏ padding mặc định */
+}
+
+/* Hiển thị nút khi có class 'show' */
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 #back-to-top:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-primary);
+    background-color: var(--primary-dark) !important;
+    box-shadow: var(--shadow-lg); /* Bóng đổ mạnh hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nhấc lên nhẹ */
+}
+
+
+
+
+
+/* =======================================================
+   Social Icon Style (Dùng chung cho cả trang)
+   ======================================================= */
+
+.social-icon {
+    /* Kích thước và hình dạng */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    /* Căn giữa icon và làm đẹp */
+    display: inline-flex; /* Thay vì flex, dùng inline-flex để nằm ngang */
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--text-light);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    text-decoration: none; /* Bỏ gạch chân mặc định của link */
+}
+
+.social-icon:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+    box-shadow: var(--shadow-md);
+}
+
+/* =======================================================
+   Footer Specific Style (Định dạng riêng trong footer)
+   ======================================================= */
+
+.footer-icon {
+    margin: 0 var(--spacing-sm); /* Tạo khoảng cách ngang giữa các icon */
+}
+
+/* Màu sắc cụ thể (giữ nguyên từ trước) */
+.whatsapp-color {
+    background-color: var(--success-color); /* #25d366 */
+}
+
+.telegram-color {
+    background-color: #0088cc;
+}
+
+.mail-color {
+    background-color: var(--secondary-color);
+}
+
+#fixed-utilities {
+    position: fixed;
+    bottom: var(--spacing-lg); /* 1.5rem từ đáy */
+    right: var(--spacing-lg);  /* 1.5rem từ phải */
+    z-index: 1050; /* Đảm bảo nó luôn nằm trên các nội dung khác */
+    display: flex;
+    flex-direction: column-reverse; /* Đảo ngược thứ tự để B2T ở dưới cùng */
+    align-items: flex-end; /* Căn phải các item */
+}
+
+/* =======================================================
+   Social Icon Style (Nằm trong container cố định)
+   ======================================================= */
+
+.social-icon {
+    /* Kích thước và hình dạng */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-top: var(--spacing-sm); /* Khoảng cách giữa các icon */
+
+    /* Căn giữa icon và làm đẹp */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--text-light); /* Màu trắng cho icon */
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    text-decoration: none; /* Bỏ gạch chân mặc định của link */
+}
+
+.social-icon:hover {
+    transform: translateX(-5px); /* Hiệu ứng dịch chuyển nhẹ sang trái khi hover */
+    box-shadow: var(--shadow-lg);
+}
+
+/* Màu sắc cụ thể cho từng icon */
+.whatsapp-color {
+    background-color: var(--success-color);
+}
+
+.telegram-color {
+    background-color: #0088cc;
+}
+
+.mail-color {
+    background-color: var(--secondary-color);
+}
+
+div#footer-social-icons{
+    position: fixed;
+    bottom: 70px;
+    right: 16px;
 }
 
 /* ========================================
@@ -1134,7 +1284,7 @@ a{
 }
 
 .modal-body {
-    color: var(--text-light);
+    color: var(--text-primary);
 }
 
 .modal-footer {
@@ -1384,7 +1534,7 @@ a{
 .mission-text {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: var(--text-light);
+    color: var(--text-primary);
 }
 
 .feature-card {
@@ -1427,7 +1577,7 @@ a{
 }
 
 .feature-description {
-    color: var(--text-light);
+    color: var(--text-primary);
     line-height: 1.6;
 }
 
@@ -1436,7 +1586,7 @@ a{
 }
 
 .safety-intro {
-    color: var(--text-light);
+    color: var(--text-primary);
     font-size: 1.1rem;
     line-height: 1.7;
 }

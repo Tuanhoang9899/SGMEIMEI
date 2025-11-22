@@ -19,6 +19,28 @@ $(document).ready(function() {
         }
     }
 
+
+    const backToTopButton = $('#back-to-top');
+    const scrollTrigger = 300; // Khoảng cách cuộn (pixels) để nút xuất hiện
+
+    // 1. Logic Hiển thị/Ẩn nút
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > scrollTrigger) {
+            backToTopButton.addClass('show');
+        } else {
+            backToTopButton.removeClass('show');
+        }
+    });
+
+    // 2. Logic Xử lý Cuộn trang
+    backToTopButton.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 600); // Tốc độ cuộn 600ms
+        return false;
+    });
+
     // Gán sự kiện click cho nút chính
     $('#mainChatBtn').on('click', toggleChatMenu);
 
