@@ -659,6 +659,12 @@ a{
     gap: var(--spacing-xs);
 }
 
+.info-item.region{
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
 .info-label {
     font-size: 0.75rem;
     color: var(--text-muted);
