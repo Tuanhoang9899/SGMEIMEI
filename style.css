@@ -237,7 +237,60 @@ a{
 }
 
 .card-header h3{
+    color: #030303;
+}
+
+.card.bg-card-custom{
+    border: none;
+    background-color: transparent !important;
+}
+
+.card .card-header{
+    background: unset;
+    border: none !important;
+
+}
+
+/* =======================================================
+   Marquee Bar (Chữ Chạy) - Modern CSS Animation
+   ======================================================= */
+
+#marquee-bar {
+    /* Sử dụng màu nền Đỏ Rực của bạn và màu chữ sáng */
+    background-color: #CC0000;
+    color: var(--text-light); /* Màu chữ trắng */
+    padding: 8px 0; /* Đệm trên dưới */
+    overflow: hidden; /* Cực kỳ quan trọng để ẩn phần nội dung bị tràn */
+    white-space: nowrap; /* Ngăn không cho nội dung xuống dòng */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Tạo bóng đổ nhẹ */
+    font-weight: var(--font-weight-medium);
+    margin-top: 0; /* Đảm bảo dính sát vào header */
+    font-size: 15px;
+}
+
+.marquee-content {
+    display: inline-block; /* Quan trọng để áp dụng animation */
+    /* Áp dụng animation */
+    animation: marquee-run 90s linear infinite; /* 25s: tốc độ, linear: mượt mà, infinite: lặp vô hạn */
+}
+
+/* Định dạng nội dung bên trong */
+.marquee-content p {
     color: #fff;
+    display: inline;
+    margin-right: 50px; /* Khoảng cách giữa các lần lặp lại nội dung */
+}
+
+/* Khung hình chính (Keyframes) cho Animation */
+@keyframes marquee-run {
+    from {
+        /* Bắt đầu từ vị trí ban đầu (0%) */
+        transform: translateX(0);
+    }
+    to {
+        /* Kết thúc ở vị trí di chuyển toàn bộ chiều dài nội dung (100% dịch chuyển) */
+        transform: translateX(-100%);
+    }
 }
 
 .btn-outline-primary{
@@ -606,7 +659,7 @@ a{
 }
 
 .escort-header {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 5px;
 }
 
 .escort-title {
@@ -639,13 +692,17 @@ a{
 .country-flag {
     font-size: 0.75rem;
     background: var(--gradient-primary);
-    color: var(--text-primary);
+    color: #fff;
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--border-radius-sm);
 }
 
 .escort-info {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 8px;
+}
+.escort-info .info-label,.escort-info .info-value{
+    color: #6b7280;
+    font-size: 14px;
 }
 
 .info-row {
@@ -655,8 +712,8 @@ a{
 
 .info-item {
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
+    /*flex-direction: column;*/
+    gap: 8px;
 }
 
 .info-item.region{
@@ -732,10 +789,26 @@ a{
 }
 
 .escort-actions {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.escort-actions a{
+    background: #f3f4f6;
+    color: #1f2937;
+    border: none;
+    box-shadow: unset;
+    text-transform: capitalize;
+}
+
+.escort-actions .contact-buttons  a:first-child{
+    background: #16a34a;
+    color: #fff;
+}
+
+.escort-actions .contact-buttons  a:last-child{
+    background: #1d4ed8;
+    color: #fff;
 }
 
 .contact-buttons {
